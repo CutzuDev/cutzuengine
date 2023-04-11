@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function index() {
   const handleOpenLoader = () => {
-    const windowFeatures = "width=601,height=521,scrollbars=no,status=1";
+    const windowFeatures = "width=601,height=522,scrollbars=no,status=1";
     window.open("/loader", "cutzuEENGINE Loader", windowFeatures);
   };
   const mainColor = "text-orange-500";

@@ -23,7 +23,7 @@ function cutzuengine() {
     }
   }
   return (
-    <>
+    <div className="bg-[#000000] flex justify-center items-center">
       <div className="flex h-[520px] w-[600px] flex-col items-center justify-center rounded-md bg-[#0b0b0b]">
         <div className="flex w-[360px] flex-col items-center justify-center gap-6">
           <div className="flex w-full items-center justify-center gap-3">
@@ -94,7 +94,7 @@ function cutzuengine() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
