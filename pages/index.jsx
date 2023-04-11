@@ -19,6 +19,7 @@ function redengine() {
         user: "",
         password: "",
       });
+      console.log(redInfo);
     }
   }
   return (
