@@ -3,7 +3,7 @@ import Image from "next/image";
 function index() {
   const handleOpenLoader = () => {
     const windowFeatures =
-      "width=600,height=520,resizable,scrollbars=yes,status=1";
+      "width=601,height=521,scrollbars=no,status=1";
     window.open("/loader", "cutzuEENGINE Loader", windowFeatures);
   };
   const mainColor = "text-orange-500";
