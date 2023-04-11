@@ -25,7 +25,7 @@ function Meta() {
       />
       <meta
         property="og:image"
-        content="https://media.discordapp.net/attachments/1090015180496322561/1095468655380275200/redlogo.png"
+        content="https://media.discordapp.net/attachments/1090015180496322561/1095471862059892797/redLogoButOrange.png"
       />
 
       <meta property="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@ function Meta() {
       />
       <meta
         property="twitter:image"
-        content="https://media.discordapp.net/attachments/1090015180496322561/1095468655380275200/redlogo.png"
+        content="https://media.discordapp.net/attachments/1090015180496322561/1095471862059892797/redLogoButOrange.png"
       />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
