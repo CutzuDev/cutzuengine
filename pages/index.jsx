@@ -4,10 +4,10 @@ function index() {
   const handleOpenLoader = () => {
     const windowFeatures =
       "width=600,height=520,resizable,scrollbars=yes,status=1";
-    window.open("/cutzuengineloader", "cutzuEngine Loader", windowFeatures);
+    window.open("/cutzuengineloader", "cutzuEENGINE Loader", windowFeatures);
   };
   const mainColor = "text-orange-500";
-  const logoPath = "/redlogo.png";
+  const logoPath = "/cutzuenginelogo.png";
   const mainName = "cutzu";
 
   return (

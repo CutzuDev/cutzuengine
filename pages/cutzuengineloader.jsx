@@ -5,7 +5,7 @@ function cutzuengine() {
   const mainColor = "text-orange-500";
   const mainHover = "hover:text-orange-500"; // For dumb tailwind reasons I had to make this
   const mainName = "cutzu";
-  const logoPath = "/redlogo.png";
+  const logoPath = "/cutzuenginelogo.png";
   // To change logo color go to line 33 and fuck around with the hue rotation, whole component is made in tailwind
 
   const [cutzuInfo, setcutzuInfo] = useState({
