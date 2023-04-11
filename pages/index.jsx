@@ -2,8 +2,7 @@ import Image from "next/image";
 
 function index() {
   const handleOpenLoader = () => {
-    const windowFeatures =
-      "width=601,height=521,scrollbars=no,status=1";
+    const windowFeatures = "width=601,height=521,scrollbars=no,status=1";
     window.open("/loader", "cutzuEENGINE Loader", windowFeatures);
   };
   const mainColor = "text-orange-500";
@@ -36,6 +35,15 @@ function index() {
         Loader
       </button>
       <span className="absolute left-2 top-0 text-2xl font-semibold text-neutral-300">
+        This project is open-source, you can find it{" "}
+        <a
+          href="https://github.com/CutzuDev/cutzuengine"
+          target="_blank"
+          className={mainColor}
+        >
+          here
+        </a>
+        <br />
         {`Login object is logged in console :)`}
       </span>
       <span className="absolute right-2 bottom-2 text-2xl">
