@@ -1,105 +1,42 @@
 import Image from "next/image";
-import { useState } from "react";
 
-function redengine() {
+function index() {
+  const handleOpenLoader = () => {
+    const windowFeatures =
+      "width=600,height=520,resizable,scrollbars=yes,status=1";
+    window.open("/cutzuengineloader", "cutzuEngine Loader", windowFeatures);
+  };
   const mainColor = "text-orange-500";
-  const mainHover = "hover:text-orange-500"; // For dumb tailwind reasons I had to make this
-  const mainName = "cutzu";
   const logoPath = "/redlogo.png";
-  // To change logo color go to line 33 and fuck around with the hue rotation, whole component is made in tailwind
+  const mainName = "cutzu";
 
-  const [redInfo, setredInfo] = useState({
-    user: "",
-    password: "",
-  });
-
-  async function handleSubmit() {
-    if (redInfo.user !== "" && redInfo.password !== "") {
-      setredInfo({
-        user: "",
-        password: "",
-      });
-      console.log(redInfo);
-    }
-  }
   return (
-    <div className="relative flex h-screen w-full items-center justify-center bg-neutral-900 hover:cursor-default">
-      <div className="flex h-[520px] w-[600px] flex-col items-center justify-center rounded-md bg-[#0b0b0b]">
-        <div className="flex w-[360px] flex-col items-center justify-center gap-6">
-          <div className="flex w-full items-center justify-center gap-3">
-            <Image
-              src={logoPath}
-              width={500}
-              height={500}
-              className="h-[50px] w-[52px] hue-rotate-[63deg]"
-              alt="Logo"
-            />
-            <h1 className="text-3xl font-light tracking-widest text-white">
-              <span className={`text-3xl font-semibold ${mainColor}`}>
-                {mainName}
-              </span>
-              ENGINE
-            </h1>
-          </div>
-          <div className=" flex w-full flex-col items-center justify-center">
-            <p className="text-xs font-bold text-[#696969]">
-              Thank you for choosing us
-            </p>
-            <p className="font-semibold text-white">
-              Sign in to continue to {mainName}ENGINE
-            </p>
-          </div>
-          <form className="mt-1 flex w-full flex-col items-center justify-center gap-7">
-            <div className="flex w-full flex-col gap-2">
-              <label className="w-full text-xs font-bold text-white">
-                E-Mail or Username
-              </label>
-              <input
-                type="text"
-                placeholder="Enter your e-mail or username"
-                className="w-full rounded-md border border-white border-opacity-5 bg-transparent px-2 py-2 text-sm font-semibold text-white outline-none transition-all duration-[850ms] placeholder:font-semibold placeholder:text-[#787878] hover:border-opacity-100 focus:border-opacity-100"
-                value={redInfo.user}
-                onChange={(e) =>
-                  setredInfo({ ...redInfo, user: e.target.value })
-                }
-              />
-            </div>
-            <div className="flex w-full flex-col gap-2">
-              <div className="flex w-full items-center justify-between">
-                <label className="text-xs font-bold text-white">Password</label>
-                <span
-                  className={`text-xs font-bold text-[#787878] transition-all duration-500 ${mainHover}`}
-                >
-                  Forgot password?
-                </span>
-              </div>
-              <input
-                type="password"
-                placeholder="Enter your password"
-                className="w-full rounded-md border border-white border-opacity-5 bg-transparent px-2 py-2 text-sm font-semibold text-white outline-none transition-all duration-[850ms] placeholder:font-semibold placeholder:text-[#787878] hover:border-opacity-100 focus:border-opacity-100"
-                onChange={(e) =>
-                  setredInfo({ ...redInfo, password: e.target.value })
-                }
-                value={redInfo.password}
-              />
-            </div>
-          </form>
-          <button
-            onClick={() => {
-              handleSubmit();
-            }}
-            className="mt-1 w-full rounded-md border border-white border-opacity-5 bg-white bg-opacity-[0.025] px-2 py-[12px] text-xs font-bold text-white transition-all duration-300 active:bg-white active:bg-opacity-10"
-          >
-            Login Now
-          </button>
-        </div>
+    <div className="relative flex flex-col h-screen w-full items-center justify-center bg-neutral-900 hover:cursor-default">
+      <div className="flex w-full items-center justify-center gap-3">
+        <Image
+          src={logoPath}
+          width={500}
+          height={500}
+          className="h-[50px] w-[52px] hue-rotate-[63deg]"
+          alt="Logo"
+        />
+        <h1 className="text-3xl font-light tracking-widest text-white">
+          <span className={`text-3xl font-semibold ${mainColor}`}>
+            {mainName}
+          </span>
+          ENGINE
+        </h1>
       </div>
-      <span className="absolute left-2 top-0 text-6xl font-semibold text-neutral-300">
-        User: {redInfo.user}
-        <br />
-        Password: {redInfo.password}
-        <br />
-        <span className="text-sm">Check console after clicking login</span>
+      <button
+        onClick={() => {
+          handleOpenLoader();
+        }}
+        className="rounded-md border mt-10 border-white border-opacity-5 bg-white bg-opacity-[0.025] px-10 py-4 text-base font-bold text-white transition-all duration-300 active:bg-white active:bg-opacity-10"
+      >
+        Loader
+      </button>
+      <span className="absolute left-2 top-0 text-2xl font-semibold text-neutral-300">
+        {`Login object is logged in console :)`}
       </span>
       <span className="absolute right-2 bottom-2 text-2xl">
         Created as a fun side project by{" "}
@@ -115,4 +52,4 @@ function redengine() {
   );
 }
 
-export default redengine;
+export default index;
